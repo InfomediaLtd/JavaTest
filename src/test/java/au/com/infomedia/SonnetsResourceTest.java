@@ -23,6 +23,12 @@ public class SonnetsResourceTest {
         // create the client
         Client c = ClientBuilder.newClient();
 
+        // uncomment the following line if you want to enable
+        // support for JSON in the client (you also have to uncomment
+        // dependency on jersey-media-json module in pom.xml and Main.startServer())
+        // --
+//         c.getConfiguration().enable(new org.glassfish.jersey.media.json.JsonJaxbFeature());
+
         target = c.target(Main.BASE_URI);
     }
 
